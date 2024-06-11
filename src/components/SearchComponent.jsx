@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { searchMovie } from '../api/api'
 
-export default function SearchComponent() {
+export default function SearchComponent({ onSearch }) {
   let [value, setValue] = useState('')
 
   const setValueFunction = (keyword) => {
@@ -9,11 +8,7 @@ export default function SearchComponent() {
   }
 
   const search = async(q) => {
-    if(q.length > 3) {
-      const query = await searchMovie(q)
-      // setPopularMovies(query.results)
-      console.log(query)
-    }
+    onSearch(q)
   }
 
   return (
