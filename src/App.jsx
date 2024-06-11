@@ -1,12 +1,12 @@
 import { useState } from 'react'
-import './App.css'
+import HeaderComponent from './components/HeaderComponent'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1>TESTING HELO</h1>
+      <HeaderComponent />
     </>
   )
 }
