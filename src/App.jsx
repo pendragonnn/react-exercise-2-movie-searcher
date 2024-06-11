@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import HeaderComponent from './components/HeaderComponent'
+import SearchComponent from './components/SearchComponent'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
       <HeaderComponent />
+      <SearchComponent />
     </>
   )
 }
